@@ -102,7 +102,6 @@ public class BattleShip {
                     grid[row][col+j] = '*';
                 }
             }
-
         }
 
     }
