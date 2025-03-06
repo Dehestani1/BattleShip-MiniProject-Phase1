@@ -251,6 +251,7 @@ public class BattleShip {
             for(int j=0; j<10; j++){
                 System.out.print(" "+grid[i][j]);
             }
+
             System.out.println();
         }
     }
