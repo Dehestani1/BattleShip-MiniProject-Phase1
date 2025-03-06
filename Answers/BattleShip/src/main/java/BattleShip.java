@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -80,7 +81,30 @@ public class BattleShip {
       @param grid The grid where ships need to be placed.
      */
     static void placeShips(char[][] grid) {
-        //todo
+        Random rand = new Random();
+
+        boolean horizontal = rand.nextBoolean();
+        int row = rand.nextInt(GRID_SIZE);
+        int col = rand.nextInt(GRID_SIZE);
+        for (int i = 2; i <=5; i++) {
+            while (!(canPlaceShip(grid,row,col,i,horizontal))){
+                horizontal = rand.nextBoolean();
+                col = rand.nextInt(GRID_SIZE);
+                row = rand.nextInt(GRID_SIZE);
+            }
+            if(horizontal){
+                for(int j = 0; j < i; j++){
+                    grid[row+j][col] = '*';
+                }
+            }
+            else {
+                for(int j = 0; j < i; j++){
+                    grid[row][col+j] = '*';
+                }
+            }
+
+        }
+
     }
 
     /**
