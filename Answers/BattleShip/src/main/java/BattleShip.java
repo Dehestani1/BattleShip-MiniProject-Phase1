@@ -57,7 +57,12 @@ public class BattleShip {
             }
             player1Turn = !player1Turn;
         }
-
+        if(allShipsSunk(player1TrackingGrid)){
+            System.out.println("Player 1 won!");
+        }
+        else if(allShipsSunk(player2TrackingGrid)){
+            System.out.println("Player 2 won!");
+        }
         System.out.println("Game Over!");
     }
 
