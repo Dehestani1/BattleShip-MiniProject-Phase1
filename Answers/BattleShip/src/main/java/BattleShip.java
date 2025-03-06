@@ -216,8 +216,22 @@ public class BattleShip {
       @return true if the input is in the correct format, false otherwise.
      */
     static boolean isValidInput(String input) {
-        //todo
-        return true;
+        if (input.length() ==2 ) {
+            if(65<=(int)input.charAt(0) && (int)input.charAt(0)<75){
+                if(48<=(int)input.charAt(1) && (int)input.charAt(1)<58){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
     }
 
     /**
