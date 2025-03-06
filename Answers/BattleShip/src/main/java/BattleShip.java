@@ -180,7 +180,9 @@ public class BattleShip {
       @return true if the game is over (all ships are sunk), false otherwise.
      */
     static boolean isGameOver() {
-        //todo
+        if(allShipsSunk(player1TrackingGrid) || allShipsSunk(player2TrackingGrid)){
+            return true;
+        }
         return false;
     }
 
